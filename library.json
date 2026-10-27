@@ -1,0 +1,20 @@
+{
+    "name": "crosspad-sdr",
+    "version": "0.1.0",
+    "license": "GPL-3.0-or-later",
+    "description": "The board's own Wi-Fi radio as a receiver (ESP-SDR): spectrum on the panel, settings on the encoder; the one app of the sdr firmware kit",
+    "keywords": [
+        "crosspad",
+        "sdr",
+        "spectrum",
+        "radio",
+        "lvgl"
+    ],
+    "dependencies": {
+        "crosspad-core": ">=2.0.0,<3.0.0",
+        "crosspad-gui": ">=2.0.0,<3.0.0"
+    },
+    "build": {
+        "appLibrary": true
+    }
+}

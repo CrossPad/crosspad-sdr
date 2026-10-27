@@ -1,0 +1,22 @@
+{
+  "name": "SDR",
+  "id": "sdr",
+  "version": "0.1.0",
+  "description": "The board's own Wi-Fi radio as a receiver (ESP-SDR): the 2.4 GHz band's spectrum on the panel, frequency, rate, gain, filter and averaging on the encoder; the one app of the sdr firmware kit",
+  "category": "tools",
+  "icon": "sdr.png",
+  "component_path": "components/crosspad-sdr",
+  "kits": [
+    "sdr"
+  ],
+  "platforms": [
+    "esp-idf"
+  ],
+  "requires": {
+    "crosspad-core": ">=2.0.0,<3.0.0",
+    "crosspad-gui": ">=2.0.0,<3.0.0"
+  },
+  "changelog": [
+    "0.1.0: first demo: snapshot spectrum (1024-bin FFT, 16/40/80 MS/s), encoder settings, max hold, Quit back to the other firmware slot"
+  ]
+}
