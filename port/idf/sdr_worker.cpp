@@ -581,7 +581,7 @@ extern "C" void sdr_radio_dump_status(char* out, size_t n) {
     static const char* const names[] = {"idle", "pending", "busy", "done", "failed"};
     uint32_t prep = 0, wait = 0, burst = 0;
     sdr_capture_timing(&prep, &wait, &burst);
-    std::snprintf(out, n, "SDR_DUMP: state=%s captured=%u span_us=%lld prep_us=%lu wait_us=%lu burst_us=%lu err=%s file=%s",
+    std::snprintf(out, n, "SDR_DUMP: state=%s captured=%u span_us=%lld prep_us=%lu wait_us=%lu burst_us=%lu err=%s file=%s\r\n",
                   names[s_dumpState.load()], static_cast<unsigned>(s_dumpCaptured),
                   static_cast<long long>(s_dumpSpanUs), (unsigned long)prep, (unsigned long)wait, (unsigned long)burst, s_dumpError, kDumpPath);
 }
@@ -600,7 +600,7 @@ extern "C" bool sdr_radio_lora_start(const sdr_dump_request_t* r) {
 
 extern "C" void sdr_radio_lora_status(char* out, size_t n) {
     static const char* const names[] = {"idle", "pending", "busy", "done", "failed"};
-    std::snprintf(out, n, "SDR_LORA: state=%s captured=%u bytes=%lu err=%s",
+    std::snprintf(out, n, "SDR_LORA: state=%s captured=%u bytes=%lu err=%s\r\n",
                   names[s_loraState.load()], static_cast<unsigned>(s_loraCaptured),
                   (unsigned long)s_loraLen, s_loraError);
 }

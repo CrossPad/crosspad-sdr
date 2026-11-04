@@ -1,7 +1,7 @@
 {
   "name": "SDR",
   "id": "sdr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The board's own Wi-Fi radio as a receiver (ESP-SDR): the 2.4 GHz band as a spectrum, a waterfall or an I/Q constellation on the panel, frequency, rate, gain, filter and averaging on the encoder; the one app of the sdr firmware kit",
   "category": "tools",
   "icon": "sdr.png",
@@ -17,6 +17,7 @@
     "crosspad-gui": ">=2.0.0,<3.0.0"
   },
   "changelog": [
+    "0.1.1: the CDC verbs' replies end their line (CRLF), so a host reads each one instead of timing out and gluing it to the next",
     "0.1.0: first version: snapshot spectrum (1024-bin FFT, 16/40/80 MS/s), waterfall and I/Q views, encoder settings, max hold, Quit back to the other firmware slot; CDC verbs SDR_DUMP (raw bursts to the card) and SDR_LORA (LoRa SF6 demod on the board)"
   ]
 }
